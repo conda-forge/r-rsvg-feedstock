@@ -1,4 +1,4 @@
-{% set version = "1.3" %}
+{% set version = '1.3' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -10,14 +10,14 @@ package:
 source:
   fn: rsvg_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/rsvg_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/rsvg/rsvg_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/rsvg_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/rsvg/rsvg_{{ version }}.tar.gz
   sha256: efa47a79d09077f3c771ad2be3492259783cba262130cc0b79533b68dc63ac86
 
 build:
   merge_build_host: True  # [win]
-  number: 2
-  skip: true  # [win or osx]
+  number: 3
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/

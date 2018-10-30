@@ -16,8 +16,8 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 2
-  skip: true  # [win or osx]
+  number: 3
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/

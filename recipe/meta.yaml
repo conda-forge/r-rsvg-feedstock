@@ -10,30 +10,42 @@ package:
 source:
   fn: rsvg_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/rsvg_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/rsvg/rsvg_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/rsvg_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/rsvg/rsvg_{{ version }}.tar.gz
   sha256: efa47a79d09077f3c771ad2be3492259783cba262130cc0b79533b68dc63ac86
 
 build:
   merge_build_host: True  # [win]
-  number: 2
-  skip: true  # [win or osx]
+  number: 3
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
 
+# Suggests: spelling, svglite, png, jpeg, webp, ggplot2
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}sed               # [win]
+    - {{posix}}grep              # [win]
+    - {{posix}}autoconf
+    - {{posix}}automake          # [not win]
+    - {{posix}}automake-wrapper  # [win]
+    - {{posix}}pkg-config
+    - {{posix}}make
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
+
   host:
     - r-base
     - librsvg              # [not win]
 
   run:
     - r-base
-    - librsvg  # [not win]
+    - {{native}}gcc-libs         # [win]
+    - librsvg              # [not win]
 
 test:
   commands:

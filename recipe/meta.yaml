@@ -15,8 +15,8 @@ source:
   sha256: efa47a79d09077f3c771ad2be3492259783cba262130cc0b79533b68dc63ac86
 
 build:
-  merge_build_host: True  # [win]
-  number: 1004
+  merge_build_host: true  # [win]
+  number: 1005
   skip: true  # [win]
   rpaths:
     - lib/R/lib/
@@ -27,16 +27,16 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}sed               # [win]
-    - {{posix}}grep              # [win]
-    - {{posix}}autoconf
-    - {{posix}}automake          # [not win]
-    - {{posix}}automake-wrapper  # [win]
-    - {{posix}}pkg-config
-    - {{posix}}make
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}sed               # [win]
+    - {{ posix }}grep              # [win]
+    - {{ posix }}autoconf
+    - {{ posix }}automake          # [not win]
+    - {{ posix }}automake-wrapper  # [win]
+    - {{ posix }}pkg-config
+    - {{ posix }}make
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
 
   host:
     - r-base
@@ -44,7 +44,7 @@ requirements:
 
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - librsvg              # [not win]
 
 test:
@@ -55,12 +55,12 @@ test:
 about:
   home: https://github.com/jeroen/rsvg#readme
   license: MIT
-  summary: Renders vector-based svg images into high-quality custom-size bitmap arrays using
-    'librsvg2'. The resulting bitmap can be written to e.g. png, jpeg or webp format.
-    In addition, the package can convert images directly to various formats such as
-    pdf or postscript.
+  summary: Renders vector-based svg images into high-quality custom-size bitmap arrays using 'librsvg2'. The resulting bitmap can be written to e.g. png, jpeg or webp format. In addition, the package can convert images directly to various formats such as pdf or postscript.
   license_family: MIT
 
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 extra:
   recipe-maintainers:
     - conda-forge/r

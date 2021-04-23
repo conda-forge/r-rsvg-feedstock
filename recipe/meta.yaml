@@ -1,4 +1,4 @@
-{% set version = "2.1" %}
+{% set version = "2.1.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rsvg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rsvg/rsvg_{{ version }}.tar.gz
-  sha256: 9675d80ec50ca8112e3f739e8e058d7dee80b0ac7ec09f3b95a6ffa593e2b62f
+  sha256: 3e11f60a6b6937d0e9057f8b215eca30dc08b3eb9be5d13696ed74eaccd20b9f
 
 build:
   merge_build_host: true  # [win]

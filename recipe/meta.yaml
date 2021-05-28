@@ -41,6 +41,7 @@ requirements:
   host:
     - r-base
     - librsvg              # [not win]
+    - glib                 # [not win]
 
   run:
     - r-base

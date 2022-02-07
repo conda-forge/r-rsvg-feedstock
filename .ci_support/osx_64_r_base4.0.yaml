@@ -5,11 +5,13 @@ c_compiler:
 c_compiler_version:
 - '11'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
+glib:
+- '2'
 librsvg:
 - '2'
 macos_machine:

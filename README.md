@@ -1,13 +1,28 @@
-About r-rsvg
-============
-
-Home: https://github.com/jeroen/rsvg#readme
-
-Package license: MIT
+About r-rsvg-feedstock
+======================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rsvg-feedstock/blob/main/LICENSE.txt)
 
+About r-rsvg
+------------
+
+Home: https://github.com/jeroen/rsvg
+
+Package license: MIT
+
 Summary: Renders vector-based svg images into high-quality custom-size bitmap arrays using 'librsvg2'. The resulting bitmap can be written to e.g. png, jpeg or webp format. In addition, the package can convert images directly to various formats such as pdf or postscript.
+
+Documentation: https://docs.ropensci.org/rsvg/
+About r-rsvg
+------------
+
+Home: https://github.com/jeroen/rsvg
+
+Package license: MIT
+
+Summary: Renders vector-based svg images into high-quality custom-size bitmap arrays using 'librsvg2'. The resulting bitmap can be written to e.g. png, jpeg or webp format. In addition, the package can convert images directly to various formats such as pdf or postscript.
+
+Documentation: https://docs.ropensci.org/rsvg/
 
 Current build status
 ====================
@@ -52,6 +67,20 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1576&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rsvg-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.2" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1576&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rsvg-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_r_base4.2</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=1576&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-rsvg-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_r_base4.2" alt="variant">
                 </a>
               </td>
             </tr>

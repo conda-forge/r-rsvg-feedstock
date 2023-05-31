@@ -6,19 +6,23 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rsvg-feedstoc
 About r-rsvg
 ------------
 
-Home: https://github.com/jeroen/rsvg#readme
+Home: https://github.com/jeroen/rsvg
 
 Package license: MIT
 
 Summary: Renders vector-based svg images into high-quality custom-size bitmap arrays using 'librsvg2'. The resulting bitmap can be written to e.g. png, jpeg or webp format. In addition, the package can convert images directly to various formats such as pdf or postscript.
+
+Documentation: https://docs.ropensci.org/rsvg/
 About r-rsvg
 ------------
 
-Home: https://github.com/jeroen/rsvg#readme
+Home: https://github.com/jeroen/rsvg
 
 Package license: MIT
 
 Summary: Renders vector-based svg images into high-quality custom-size bitmap arrays using 'librsvg2'. The resulting bitmap can be written to e.g. png, jpeg or webp format. In addition, the package can convert images directly to various formats such as pdf or postscript.
+
+Documentation: https://docs.ropensci.org/rsvg/
 
 Current build status
 ====================

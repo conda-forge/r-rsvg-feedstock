@@ -1,4 +1,4 @@
-{% set version = "2.6.0" %}
+{% set version = "2.6.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 
@@ -11,10 +11,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rsvg_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rsvg/rsvg_{{ version }}.tar.gz
-  sha256: 4b448cc0f40c98d8c342499d6fe18377c8541f7c0696b999e27b0c7ba48e4970
+  sha256: 7e6ab0685c37fa2074f44fddcca407989c8bc15fdee2f319c317662b4d48c955
 
 build:
-  number: 1
+  number: 0
   # Checking windows to see if it passes. Uncomment the line if it fails.
   # skip: true  # [win]
   rpaths:

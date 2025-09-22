@@ -18,6 +18,8 @@ channel_targets:
 - conda-forge main
 cran_mirror:
 - https://cran.r-project.org
+expat:
+- '2'
 glib:
 - '2'
 librsvg:
@@ -32,3 +34,5 @@ r_base:
 - '4.5'
 target_platform:
 - osx-64
+zlib:
+- '1'

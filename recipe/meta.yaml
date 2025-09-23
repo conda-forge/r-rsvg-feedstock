@@ -1,5 +1,4 @@
 {% set version = "2.6.1" %}
-
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -14,12 +13,14 @@ source:
   sha256: 7e6ab0685c37fa2074f44fddcca407989c8bc15fdee2f319c317662b4d48c955
 
 build:
-  number: 0
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -40,13 +41,18 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - librsvg                      # [not win]
-    - glib                         # [not win]
     - cairo                        # [not win]
+    - expat                        # [not win]
+    - glib                         # [not win]
+    - libiconv                     # [win]
+    - librsvg                      # [not win]
+    - xorg-kbproto                 # [linux]
+    - xorg-renderproto             # [linux]
+    - xorg-xproto                  # [linux]
+    - xorg-xextproto               # [linux]
+    - zlib                         # [not win]
   run:
     - r-base
-    - librsvg                      # [not win]
-    - cairo                        # [not win]
 
 test:
   commands:

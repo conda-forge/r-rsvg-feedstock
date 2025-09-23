@@ -47,6 +47,7 @@ requirements:
     - libiconv                     # [win]
     - librsvg                      # [not win]
     - xorg-kbproto                 # [linux]
+    - xorg-renderproto             # [linux]
     - xorg-xproto                  # [linux]
     - xorg-xextproto               # [linux]
     - zlib                         # [not win]

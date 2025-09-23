@@ -46,8 +46,9 @@ requirements:
     - glib                         # [not win]
     - libiconv                     # [win]
     - librsvg                      # [not win]
-    - xorg-kbproto                  # [linux]
+    - xorg-kbproto                 # [linux]
     - xorg-xproto                  # [linux]
+    - xorg-xextproto               # [linux]
     - zlib                         # [not win]
   run:
     - r-base
